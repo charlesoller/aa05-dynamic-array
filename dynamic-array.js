@@ -17,8 +17,15 @@ class DynamicArray {
 
 
   pop() {
-
-    // Your code here
+    if(this.length < 1) return undefined
+    let arr = new Array(this.length - 1);
+    let lastEle = this.data[this.length - 1];
+    for(let i = 0; i < this.data.length - 1; i++){
+      arr[i] = this.data[i]
+    }
+    this.data = arr;
+    this.length--;
+    return lastEle;
   }
 
   shift() {
