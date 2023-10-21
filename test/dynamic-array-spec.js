@@ -195,8 +195,6 @@ describe('Dynamic Array', function () {
     dynamicArr.unshift(6);
 
     expect(dynamicArr.capacity).to.equal(16);
-    console.log(dynamicArr)
-    console.log(dynamicArr.data.length)
     expect(dynamicArr.data.length).to.equal(16);
     expect(dynamicArr.length).to.equal(9);
 

@@ -48,8 +48,12 @@ class DynamicArray {
     for (let i = 0; i < this.length; i++) {
       arr[i+1] = this.data[i]
     }
-    this.length = arr.length;
-    this.data = arr;
+
+    for(let i = 0; i < arr.length; i++){
+      this.data[i] = arr[i];
+    }
+
+    this.length++;
   }
 
   indexOf(val) {
