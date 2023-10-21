@@ -17,7 +17,7 @@ class DynamicArray {
 
 
   pop() {
-    
+
     // Your code here
   }
 
@@ -27,8 +27,13 @@ class DynamicArray {
   }
 
   unshift(val) {
-
-    // Your code here
+    let arr = new Array(this.length+1);
+    arr[0] = val;
+    for (let i = 0; i < this.length; i++) {
+      arr[i+1] = this.data[i]
+    }
+    this.length = arr.length;
+    this.data = arr;
   }
 
   indexOf(val) {
